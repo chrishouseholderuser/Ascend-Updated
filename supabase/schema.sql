@@ -8,6 +8,9 @@ create table if not exists public.student_progress (
 
 alter table public.student_progress enable row level security;
 
+grant usage on schema public to authenticated;
+grant select, insert, update on public.student_progress to authenticated;
+
 create policy "Students read only their own progress"
 on public.student_progress for select to authenticated
 using ((select auth.uid()) = user_id);
