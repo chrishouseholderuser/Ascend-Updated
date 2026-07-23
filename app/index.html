@@ -1788,6 +1788,11 @@ function bootUser(){
   applyChrome(); render();
 }
 if(cloudReady()){
+  /* A confirmation link returns a new session in the URL. Listen for that
+     event as well as checking storage, so first-time users arrive signed in. */
+  supabaseClient.auth.onAuthStateChange(function(event, session){
+    if(session && session.user && SESSION.uid!==session.user.id) startCloudSession(session.user);
+  });
   supabaseClient.auth.getSession().then(function(r){
     if(r.data && r.data.session) startCloudSession(r.data.session.user);
     else { state=defaultState(); render(); }
