@@ -4,6 +4,6 @@
   The anon/publishable key is safe to expose; never put service_role keys here.
 */
 window.ASCEND_CONFIG = window.ASCEND_CONFIG || {
-  supabaseUrl: "",
-  supabaseAnonKey: ""
+  supabaseUrl: "https://bkmfkazqhvupfdudmozm.supabase.co",
+  supabaseAnonKey: "sb_publishable_NmfMsON7pi3eUkMQKV2YJA_F3mUU_BG"
 };
