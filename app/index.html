@@ -1598,7 +1598,7 @@ var ACTIONS={
     if(!cloudReady()){ authErr=cloudError(); render(); return; }
     if(!isEmail){ authErr="Please use an email address for your hosted account."; render(); return; }
     if(!/^[A-Za-z0-9_.]{2,20}$/.test(val("au_user")||"")){ authErr="Username can use letters, numbers, . and _ (2–20 characters)."; render(); return; }
-    supabaseClient.auth.signUp({email:idv,password:val("au_pw")||"",options:{data:{username:val("au_user").trim()}}}).then(function(r){
+    supabaseClient.auth.signUp({email:idv,password:val("au_pw")||"",options:{emailRedirectTo:location.origin+location.pathname,data:{username:val("au_user").trim()}}}).then(function(r){
       if(r.error){ authErr=r.error.message; render(); return; }
       authErr=""; authVals={};
       if(r.data.session) startCloudSession(r.data.user);
