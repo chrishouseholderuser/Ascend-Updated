@@ -24,10 +24,10 @@ cost, or student prompt data to protect.
 3. Set the project URL and **publishable/anon** key in `app/config.js`. Do not
    use a `service_role` key. This browser key is intentionally public and may
    be committed with the app.
-4. Deploy the contents of `app/` to Netlify or Cloudflare Pages. Configure the
-   build as **none** and the publish directory as `app` if deploying from this
-   repository. Use HTTPS; it is required for PWA installation and protects
-   logins in transit.
+4. The included GitHub Actions workflow deploys `app/` to GitHub Pages when
+   GitHub Pages is set to **GitHub Actions** under repository Settings → Pages.
+   The live URL is `https://chrishouseholderuser.github.io/Ascend-Updated/`.
+   Use HTTPS; it is required for PWA installation and protects logins in transit.
 5. Push this directory to a brand-new GitHub repository (do not add it to an
    existing repository).
 
