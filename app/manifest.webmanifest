@@ -1,0 +1,17 @@
+{
+  "name": "Ascend — SAT Prep",
+  "short_name": "Ascend",
+  "description": "Gamified digital-SAT prep: climb a mountain toward your target score with lessons, adaptive practice, a full-length test, and endless generated quizzes.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B1026",
+  "theme_color": "#0B1026",
+  "categories": ["education"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
